@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+body{
+  background:rgb(36, 35, 35);
+  background:linear-gradient(90deg,rgba(54,217,182,1) 0% rgba(32,152,126,1) 43%)
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,h2,h3,h4,span,p,strike{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#task-container{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  box-shadow: 0 0 100px rgba(170, 229, 170, 0.25), 0 10px 10px rgba(0,0,0,0.22), 1px -11px 25px rgba(0,0,0,0.22) ;
+  background-color: rgb(44, 40, 40);
+  justify-content: space-around;
+  align-items: flex-start;
+  border-radius: 4px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#form-wrapper{
+  position: -webkit-sticky;
+  position: sticky;
+  top:0rem;
+  border-bottom: 1px solid #221f1f;
+  box-shadow: 0 3px 8px rgba(0,0,0, 0.25);
+  padding: 40px;
+}
+#form-wrapper h2{
+  color: rgb(255, 255, 0);
+}
+#submit{
+  background-color: rgb(77, 72, 72);
+  float: right;
+}
+.flex-wrapper{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.task-wrapper{
+  max-width: 450px;
+  color: #ffffff;
+  cursor: pointer;
+  border-bottom: 0.5px solid #7e7878;
+  color: #ffffff;
+  padding: 0 0 0 5px;
+}
+.fa-circle{
+  padding: 10px 4px 1px 4px;
+  /* margin: 10px; */
+  font-size: 20px;
+  float: left;
+  color: #7e7878;
+}
+.task-list hr{
+ margin-top: 0;
+ margin-bottom: 10px;
+}
+#list-wrapper{
+  padding: 30px 6px 0px 0px;
+}
+.task-input{
+  width: 100%;
+  /* padding: 12px 20px; */
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background-image:none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 20px;
+}
+.col-sm-6 i{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.head{
+  border-bottom: 1px solid #7e7878;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#info{
+  background-color: transparent;
+}
+#info i{
+  color: #3b3838;
 }
