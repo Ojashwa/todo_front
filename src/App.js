@@ -20,7 +20,7 @@ class App extends React.Component {
     this.infoIcon = this.infoIcon.bind(this);
   }
   componentDidMount() {
-    this.fetchTask();
+    // this.fetchTask();
     // document.getElementById('t-info').addEventListener('mouseover',this.infoIcon,false);
   }
   fetchTask(e) {
@@ -88,31 +88,31 @@ class App extends React.Component {
     // console.log("TITLE",this.state.activeItem);
     if (e.keyCode === 13) {
      
-      let csrf = this.getCsrf("csrftoken");
-      fetch("http://127.0.0.1:8000/api/task-create/", {
-        method: "POST",
-        headers: {
-          'Content-type': 'application/json',
-          "X-CSRFToken": csrf,
-        },
-        body: JSON.stringify(this.state.activeItem),
-      }).then(
-        ((response) => {
-          // console.log(response);
-          // this.fetchTask();
-          this.setState({
-            activeItem: {
-              id: null,
-              title: "",
-              completed: false,
-            },
-          });
+      // let csrf = this.getCsrf("csrftoken");
+      // fetch("http://127.0.0.1:8000/api/task-create/", {
+      //   method: "POST",
+      //   headers: {
+      //     'Content-type': 'application/json',
+      //     "X-CSRFToken": csrf,
+      //   },
+      //   body: JSON.stringify(this.state.activeItem),
+      // }).then(
+      //   ((response) => {
+      //     // console.log(response);
+      //     // this.fetchTask();
+      //     this.setState({
+      //       activeItem: {
+      //         id: null,
+      //         title: "",
+      //         completed: false,
+      //       },
+      //     });
           // document.getElementById('new-task').remove();
           document.getElementById('submit').click();
-        })
-      ).catch(function (error){
-        console.log("ERROR",error);// shows the if any error occur in response
-      })
+      //   })
+      // ).catch(function (error){
+      //   console.log("ERROR",error);// shows the if any error occur in response
+      // })
     } 
     // else {
     //   console.log(e.target.value);
